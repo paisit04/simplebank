@@ -9,5 +9,6 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: secret
+      POSTGRES_DB: simplebank
     volumes:
       - ./db-data/postgres/:/var/lib/postgresql/data/
