@@ -1,0 +1,5 @@
+db-data
+.DS_Store
+dbdiagram.txt
+docker-compose.yml
+README.md
