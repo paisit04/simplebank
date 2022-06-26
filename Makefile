@@ -1,3 +1,5 @@
+DB_URL=postgresql://root:secret@localhost:5432/simplebank?sslmode=disable
+
 startdb:
 	docker-compose up -d postgres
 
@@ -11,16 +13,16 @@ dropdb:
 	docker-compose exec postgres dropdb simplebank
 
 migrateup:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simplebank?sslmode=disable" -verbose up
+	migrate -path db/migration -database "$(DB_URL)" -verbose up
 
 migrateup1:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simplebank?sslmode=disable" -verbose up 1
+	migrate -path db/migration -database "$(DB_URL)" -verbose up 1
 
 migratedown:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simplebank?sslmode=disable" -verbose down
+	migrate -path db/migration -database "$(DB_URL)" -verbose down
 
 migratedown1:
-	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/simplebank?sslmode=disable" -verbose down 1
+	migrate -path db/migration -database "$(DB_URL)" -verbose down 1
 
 sqlc:
 	sqlc generate
