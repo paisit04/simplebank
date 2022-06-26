@@ -1,5 +1,5 @@
 startdb:
-	docker-compose up -d
+	docker-compose up -d postgres
 
 stopdb:
 	docker-compose down
