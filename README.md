@@ -15,6 +15,7 @@ Ref: https://github.com/techschool/simplebank
 - [jwt-go](https://github.com/golang-jwt/jwt) - A go implementation of JSON Web Tokens.
 - [paseto](https://github.com/o1egl/paseto) - Platform-Agnostic Security Tokens implementation in GO (Golang).
 - [evans](https://github.com/ktr0731/evans) - universal gRPC client.
+- [grpc-gateway](https://github.com/grpc-ecosystem/grpc-gateway) - gRPC to JSON proxy generator following the gRPC HTTP spec
 
 ## Migrate
 
